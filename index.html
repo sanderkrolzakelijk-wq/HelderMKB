@@ -43,9 +43,9 @@
     .btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid rgba(70,190,232,.35);outline-offset:3px}
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(221,232,237,.75)}
     .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:flex;align-items:center;gap:12px;font-size:1.28rem;font-weight:800}
-    .brand strong span{color:var(--mint)}
-    .logo-mark{width:42px;height:42px}
+    .brand{display:flex;align-items:center}
+    .brand-logo{width:250px;height:70px;object-fit:cover;object-position:center}
+    footer .brand-logo{filter:brightness(0) invert(1)}
     .nav-links{display:flex;align-items:center;gap:27px;font-size:.91rem;font-weight:700}
     .nav-links a:not(.btn):hover{color:#159b82}
     .menu{display:none;border:1px solid var(--line);background:#fff;width:44px;height:44px;border-radius:12px}
@@ -147,6 +147,7 @@
     }
     @media(max-width:640px){
       .container{width:min(calc(100% - 28px),var(--max))}.section{padding:76px 0}
+      .brand-logo{width:190px;height:58px}
       h1{font-size:3.25rem}.hero-actions,.hero-actions .btn{width:100%}
       .hero{padding:84px 0 92px}.hero-grid{gap:54px}.hero-copy{margin-top:30px}.benefits{margin-top:34px}.hero-actions{margin-top:38px}.hero-photo{min-height:540px;border-radius:30px}.hero-photo:before{inset:24px;border-radius:22px}
       .services,.advantages,.timeline,.articles{grid-template-columns:1fr}
@@ -264,14 +265,7 @@
 <header>
   <div class="container nav">
     <a href="#top" class="brand" aria-label="HelderMKB home">
-      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <defs><linearGradient id="g1" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#46BEE8"/><stop offset="1" stop-color="#22D3A6"/></linearGradient></defs>
-        <rect x="8" y="9" width="13" height="46" rx="6.5" fill="url(#g1)"/>
-        <rect x="43" y="9" width="13" height="46" rx="6.5" fill="#0D1B2A"/>
-        <path d="M15 36c12-13 22 8 37-10" fill="none" stroke="#75DECF" stroke-width="9" stroke-linecap="round"/>
-        <path d="M45 17c5-7 11-5 12-1-5 4-9 5-12 1Z" fill="#22D3A6"/>
-      </svg>
-      <strong>Helder<span>MKB</span></strong>
+      <img class="brand-logo" src="images/logo/logo.png" alt="HelderMKB">
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Hoofdnavigatie">
       <a href="#diensten">Diensten</a><a href="#over">Over mij</a><a href="#werkwijze">Werkwijze</a>
@@ -448,7 +442,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a href="#top" class="brand"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="9" width="13" height="46" rx="6.5" fill="#22D3A6"/><rect x="43" y="9" width="13" height="46" rx="6.5" fill="#fff"/><path d="M15 36c12-13 22 8 37-10" fill="none" stroke="#75DECF" stroke-width="9" stroke-linecap="round"/></svg><strong>Helder<span>MKB</span></strong></a>
+        <a href="#top" class="brand" aria-label="HelderMKB home"><img class="brand-logo" src="images/logo/logo.png" alt="HelderMKB"></a>
         <p style="margin-top:16px;max-width:330px">Slimme administratie, helder financieel inzicht en praktische automatisering voor zzp’ers en kleine ondernemers.</p>
       </div>
       <div><h3>Navigatie</h3><div class="footer-links"><a href="#diensten">Diensten</a><a href="#over">Over mij</a><a href="#werkwijze">Werkwijze</a><a href="#tarieven">Tarieven</a></div></div>
