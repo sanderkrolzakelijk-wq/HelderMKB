@@ -345,6 +345,8 @@
     }
 
 </style>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 <header>
@@ -412,6 +414,20 @@
     </div>
   </div>
 </section>
+
+<aside class="hero-banner" id="heroBanner" aria-label="Plan een vrijblijvende kennismaking" aria-hidden="true">
+  <div class="hero-banner__copy">
+    <strong><span class="hero-banner__desktop-title">Toe aan meer rust in je administratie?</span><span class="hero-banner__mobile-title">Toe aan meer rust?</span></strong>
+    <small>Plan vrijblijvend een kennismaking van 20 minuten.</small>
+  </div>
+  <div class="hero-banner__benefits" aria-label="Voordelen">
+    <span>Persoonlijk contact</span>
+    <span>Voormalig Finance &amp; Product Specialist bij Jortt</span>
+    <span>Duidelijke vaste afspraken</span>
+  </div>
+  <a class="btn btn-primary hero-banner__cta" href="#afspraak">Plan kennismaking <span aria-hidden="true">→</span></a>
+  <button class="hero-banner__close" id="heroBannerClose" type="button" aria-label="Banner sluiten">×</button>
+</aside>
 
 <section class="personal-intro" aria-labelledby="even-voorstellen">
   <div class="container personal-intro-grid">
@@ -575,6 +591,32 @@
   // Pas alleen deze URL aan zodra je definitieve Calendly-link bekend is:
   const CALENDLY_URL='https://calendly.com/';
   document.getElementById('calendlyLink').href=CALENDLY_URL;
+
+  const hero=document.querySelector('.hero');
+  const heroBanner=document.getElementById('heroBanner');
+  const heroBannerClose=document.getElementById('heroBannerClose');
+  const HERO_BANNER_KEY='heldermkb-hero-banner-dismissed';
+  let heroBannerDismissed=false;
+
+  try{heroBannerDismissed=sessionStorage.getItem(HERO_BANNER_KEY)==='true'}catch(error){}
+
+  const updateHeroBanner=()=>{
+    const visible=!heroBannerDismissed&&window.scrollY<120;
+    heroBanner.classList.toggle('is-visible',visible);
+    heroBanner.setAttribute('aria-hidden',String(!visible));
+  };
+
+  heroBannerClose.addEventListener('click',()=>{
+    heroBannerDismissed=true;
+    try{sessionStorage.setItem(HERO_BANNER_KEY,'true')}catch(error){}
+    updateHeroBanner();
+  });
+
+  window.addEventListener('scroll',updateHeroBanner,{passive:true});
+  requestAnimationFrame(()=>{
+    hero.classList.add('is-ready');
+    updateHeroBanner();
+  });
 </script>
 </body>
 </html>
