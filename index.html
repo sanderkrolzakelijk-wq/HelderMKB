@@ -415,19 +415,32 @@
   </div>
 </section>
 
-<aside class="hero-banner" id="heroBanner" aria-label="Plan een vrijblijvende kennismaking" aria-hidden="true">
-  <div class="hero-banner__copy">
-    <strong><span class="hero-banner__desktop-title">Toe aan meer rust in je administratie?</span><span class="hero-banner__mobile-title">Toe aan meer rust?</span></strong>
-    <small>Plan vrijblijvend een kennismaking van 20 minuten.</small>
+<section class="trust-bar-section" aria-label="Waarom kiezen voor HelderMKB">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="trust-bar__inner">
+        <div class="trust-bar__intro">
+          <strong>Je administratie in vertrouwde handen</strong>
+          <span>Persoonlijk, duidelijk en zonder verrassingen.</span>
+        </div>
+        <div class="trust-bar__items">
+          <div class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">✓</span>
+            <div><strong>Persoonlijk contact</strong><small>Altijd één vast aanspreekpunt</small></div>
+          </div>
+          <div class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">✓</span>
+            <div><strong>Ervaren specialist</strong><small>Voormalig Finance &amp; Product Specialist bij Jortt</small></div>
+          </div>
+          <div class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">✓</span>
+            <div><strong>Duidelijke afspraken</strong><small>Vooraf helder, zonder verrassingen</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="hero-banner__benefits" aria-label="Voordelen">
-    <span>Persoonlijk contact</span>
-    <span>Voormalig Finance &amp; Product Specialist bij Jortt</span>
-    <span>Duidelijke vaste afspraken</span>
-  </div>
-  <a class="btn btn-primary hero-banner__cta" href="#afspraak">Plan kennismaking <span aria-hidden="true">→</span></a>
-  <button class="hero-banner__close" id="heroBannerClose" type="button" aria-label="Banner sluiten">×</button>
-</aside>
+</section>
 
 <section class="personal-intro" aria-labelledby="even-voorstellen">
   <div class="container personal-intro-grid">
@@ -593,30 +606,7 @@
   document.getElementById('calendlyLink').href=CALENDLY_URL;
 
   const hero=document.querySelector('.hero');
-  const heroBanner=document.getElementById('heroBanner');
-  const heroBannerClose=document.getElementById('heroBannerClose');
-  const HERO_BANNER_KEY='heldermkb-hero-banner-dismissed';
-  let heroBannerDismissed=false;
-
-  try{heroBannerDismissed=sessionStorage.getItem(HERO_BANNER_KEY)==='true'}catch(error){}
-
-  const updateHeroBanner=()=>{
-    const visible=!heroBannerDismissed&&window.scrollY<120;
-    heroBanner.classList.toggle('is-visible',visible);
-    heroBanner.setAttribute('aria-hidden',String(!visible));
-  };
-
-  heroBannerClose.addEventListener('click',()=>{
-    heroBannerDismissed=true;
-    try{sessionStorage.setItem(HERO_BANNER_KEY,'true')}catch(error){}
-    updateHeroBanner();
-  });
-
-  window.addEventListener('scroll',updateHeroBanner,{passive:true});
-  requestAnimationFrame(()=>{
-    hero.classList.add('is-ready');
-    updateHeroBanner();
-  });
+  requestAnimationFrame(()=>hero.classList.add('is-ready'));
 </script>
 </body>
 </html>
