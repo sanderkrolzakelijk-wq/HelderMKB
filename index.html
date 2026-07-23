@@ -56,10 +56,6 @@
     .hero-content{max-width:525px;padding:24px 0}
     .hero-content h1{line-height:.98;max-width:520px}
     .hero-copy{font-size:1.17rem;max-width:510px;margin:38px 0 0;line-height:1.78}
-    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:46px}
-    .benefits{display:grid;grid-template-columns:1fr;gap:16px;margin-top:42px}
-    .benefit{display:flex;align-items:center;gap:11px;font-size:.93rem;font-weight:700}
-    .mini-icon{width:30px;height:30px;border-radius:10px;background:var(--ice);display:grid;place-items:center;color:#109b82;flex:0 0 30px}
     .hero-photo{position:relative;min-height:760px;border-radius:46px;background:linear-gradient(145deg,#f7fcfd,#eaf8fb 56%,#effbf7);border:1px solid rgba(70,190,232,.2);box-shadow:0 26px 70px rgba(13,27,42,.09);overflow:hidden;display:grid;place-items:center}
     .hero-photo:before{content:"";position:absolute;inset:40px;border:2px dashed rgba(13,27,42,.12);border-radius:34px}
     .hero-photo-placeholder{position:relative;z-index:1;text-align:center;color:#73808b;max-width:270px;font-size:.9rem;padding:28px}
@@ -180,8 +176,8 @@
       .container{width:min(calc(100% - 28px),var(--max))}.section{padding:76px 0}
       .brand-logo{width:190px;height:58px}
       header .brand-logo{width:240px;height:70px;margin-left:-34px}
-      h1{font-size:3.25rem}.hero-actions,.hero-actions .btn{width:100%}
-      .hero{padding:84px 0 92px}.hero-grid{gap:54px}.hero-copy{margin-top:30px}.benefits{margin-top:34px}.hero-actions{margin-top:38px}.hero-photo{min-height:540px;border-radius:30px}.hero-photo:before{inset:24px;border-radius:22px}
+      h1{font-size:3.25rem}
+      .hero{padding:84px 0 92px}.hero-grid{gap:54px}.hero-copy{margin-top:30px}.hero-photo{min-height:540px;border-radius:30px}.hero-photo:before{inset:24px;border-radius:22px}
       .services,.advantages,.timeline,.articles{grid-template-columns:1fr}
       .portrait,.trust-visual{min-height:510px;border-radius:28px}.trust-visual{padding:20px}.admin-window{padding:20px}.contact-note{margin:-6px 10px 0}.personal-tag{left:18px;right:18px;bottom:18px}.advantage{border-right:0;border-bottom:1px solid rgba(13,27,42,.1);padding:20px 0}.advantage:last-child{border:0}
       .cta-box{padding:38px 25px;display:block}.plant{margin:30px auto 0}
@@ -225,38 +221,6 @@
     }
     .hero-title-line{display:block;white-space:nowrap}
     .hero-copy{font-size:1.02rem;max-width:610px;margin:32px 0 36px;line-height:1.7}
-    .hero-panel{
-      max-width:610px;
-      margin:0 0 34px
-    }
-    .hero-panel:after{display:none}
-    .hero-panel-label{display:block;margin-bottom:10px;color:#0c7f70;font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-    .hero .benefits{display:grid;gap:0;margin:0}
-    .hero .benefit{
-      display:grid;
-      grid-template-columns:34px 1fr;
-      column-gap:14px;
-      align-items:center;
-      padding:15px 0;
-      border-bottom:1px solid var(--line)
-    }
-    .hero .benefit:first-child{padding-top:0}
-    .hero .benefit:last-child{border:0;padding-bottom:0}
-    .hero .benefit .mini-icon{
-      grid-row:1 / span 2;
-      width:32px;height:32px;
-      border-radius:50%;
-      background:#e7f9f4;
-      color:#0c947d;
-      font-style:normal;
-      font-size:.82rem
-    }
-    .hero .benefit strong{display:block;font-size:.91rem;line-height:1.35}
-    .hero .benefit small{display:block;color:var(--muted);font-weight:500;font-size:.77rem;line-height:1.5;margin-top:2px}
-    .hero-actions{margin:0 0 28px}
-    .hero-actions .btn{min-width:195px;min-height:50px;padding:0 19px;border-radius:14px;font-size:.9rem}
-    .hero-actions .btn-primary{background:linear-gradient(105deg,#52c9ad,#4dbdda);box-shadow:none}
-    .hero-actions .btn-primary:hover{background:linear-gradient(105deg,#42bfa2,#3caed1)}
     .hero-trust{
       display:grid;
       grid-template-columns:38px 1fr;
@@ -312,7 +276,6 @@
     @media(max-width:1120px){
       .container{width:min(calc(100% - 42px),1200px)}
       .hero-grid{grid-template-columns:minmax(0,760px)}
-      .hero-panel{max-width:760px}
       .hero h1{font-size:clamp(3.4rem,5.5vw,4rem)}
       .hero-photo{min-height:780px;height:780px}
       .hero-photo img{top:-44px;width:min(115%,700px);height:auto}
@@ -333,9 +296,7 @@
       .hero h1{font-size:clamp(3.2rem,14vw,4.25rem)}
       .hero-title-line{white-space:normal}
       .hero-copy{font-size:1rem;margin:24px 0}
-      .hero-actions .btn{width:100%}
       .hero-trust{grid-template-columns:42px 1fr;padding:18px}
-      .hero-panel{margin-bottom:28px}
       .hero-trust-icon{width:40px;height:40px}
       .micro-trust{display:none}
       .hero-photo{min-height:540px;height:540px}
@@ -381,32 +342,22 @@
         </div>
       </div>
 
-      <aside class="hero-panel" aria-label="Voordelen van HelderMKB">
-        <span class="hero-panel-label">Daarom HelderMKB</span>
-        <div class="benefits">
-          <div class="benefit">
-            <i class="mini-icon">✓</i>
-            <div><strong>Altijd inzicht</strong><small>Je cijfers zijn actueel, zodat je nooit achter de feiten aanloopt.</small></div>
+      <aside class="hero-offer" aria-label="Oprichtersvoordeel">
+        <div class="hero-offer__header">
+          <div class="hero-offer__label">
+            <span class="hero-offer__icon" aria-hidden="true">✦</span>
+            <span class="hero-offer__eyebrow">Oprichtersvoordeel</span>
           </div>
-          <div class="benefit">
-            <i class="mini-icon">✓</i>
-            <div><strong>Eén vast aanspreekpunt</strong><small>Geen helpdesk, maar iemand die jouw onderneming kent.</small></div>
-          </div>
-          <div class="benefit">
-            <i class="mini-icon">✓</i>
-            <div><strong>Slim waar het kan</strong><small>Automatisering waar mogelijk, persoonlijk contact waar nodig.</small></div>
-          </div>
-          <div class="benefit">
-            <i class="mini-icon">✓</i>
-            <div><strong>Geen verrassingen</strong><small>Vaste prijzen en duidelijke afspraken vooraf.</small></div>
-          </div>
+          <span class="hero-offer__badge">Nog 25 plekken</span>
+        </div>
+        <h2>Word één van onze eerste 25 klanten</h2>
+        <p class="hero-offer__accent">en ontvang blijvend <strong><span>€30</span> korting per maand.</strong></p>
+        <p class="hero-offer__note">De korting blijft geldig zolang je zonder onderbreking klant blijft bij HelderMKB.</p>
+        <div class="hero-offer__actions">
+          <a href="#afspraak" class="btn btn-primary hero-offer__cta">Claim mijn plek →</a>
+          <a href="#diensten" class="btn btn-secondary hero-offer__cta">Bekijk diensten →</a>
         </div>
       </aside>
-
-      <div class="hero-actions">
-        <a href="#afspraak" class="btn btn-primary">Plan kennismaking&nbsp; →</a>
-        <a href="#diensten" class="btn btn-secondary">Bekijk diensten &nbsp;→</a>
-      </div>
     </div>
 
     <div class="hero-photo">
@@ -419,22 +370,22 @@
   <div class="container">
     <div class="trust-bar">
       <div class="trust-bar__inner">
-        <div class="trust-bar__intro">
-          <strong>Je administratie in vertrouwde handen</strong>
-          <span>Persoonlijk, duidelijk en zonder verrassingen.</span>
-        </div>
         <div class="trust-bar__items">
           <div class="trust-bar__item">
             <span class="trust-bar__icon" aria-hidden="true">✓</span>
-            <div><strong>Persoonlijk contact</strong><small>Altijd één vast aanspreekpunt</small></div>
+            <div><strong>Altijd inzicht</strong><small>Je cijfers zijn actueel, zodat je nooit achter de feiten aanloopt.</small></div>
           </div>
           <div class="trust-bar__item">
             <span class="trust-bar__icon" aria-hidden="true">✓</span>
-            <div><strong>Ervaren specialist</strong><small>Voormalig Finance &amp; Product Specialist bij Jortt</small></div>
+            <div><strong>Eén vast aanspreekpunt</strong><small>Geen helpdesk, maar iemand die jouw onderneming kent.</small></div>
           </div>
           <div class="trust-bar__item">
             <span class="trust-bar__icon" aria-hidden="true">✓</span>
-            <div><strong>Duidelijke afspraken</strong><small>Vooraf helder, zonder verrassingen</small></div>
+            <div><strong>Slim waar het kan</strong><small>Automatisering waar mogelijk, persoonlijk contact waar nodig.</small></div>
+          </div>
+          <div class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">✓</span>
+            <div><strong>Geen verrassingen</strong><small>Vaste prijzen en duidelijke afspraken vooraf.</small></div>
           </div>
         </div>
       </div>
