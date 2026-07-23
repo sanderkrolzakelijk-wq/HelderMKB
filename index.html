@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#FFFFFF">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <style>
     :root{
       --mint:#22D3A6;--blue:#46BEE8;--ice:#E6F6FB;--navy:#0D1B2A;
@@ -45,7 +45,7 @@
     .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center}
     .brand-logo{width:250px;height:70px;object-fit:cover;object-position:center}
-    header .brand-logo{width:290px;height:78px}
+    header .brand-logo{width:335px;height:88px;margin-left:-51px}
     footer .brand-logo{filter:brightness(0) invert(1)}
     .nav-links{display:flex;align-items:center;gap:27px;font-size:.91rem;font-weight:700}
     .nav-links a:not(.btn):hover{color:#159b82}
@@ -121,9 +121,10 @@
     .contact-note strong{display:block;font-size:.84rem}.contact-note p{color:rgba(255,255,255,.68);font-size:.72rem;line-height:1.5;margin-top:3px}
     .trust-intro{font-size:1.24rem;line-height:1.65;color:var(--navy);margin-top:22px;max-width:700px}
     .about-copy>p:not(.trust-intro){margin-top:16px;max-width:690px}
-    .personal-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
-    .personal-point{padding:16px;border-radius:17px;background:var(--off);border:1px solid var(--line)}
-    .personal-point b{display:block;font-size:.86rem}.personal-point span{display:block;color:var(--muted);font-size:.75rem;margin-top:3px}
+    .personal-points{display:grid;gap:0;margin-top:34px;max-width:620px;border-top:1px solid var(--line)}
+    .personal-point{position:relative;padding:18px 0 18px 38px;border-bottom:1px solid var(--line)}
+    .personal-point:before{content:"✓";position:absolute;left:0;top:19px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#e6f9f3;color:#0c917b;font-size:.72rem;font-weight:800}
+    .personal-point b{display:block;font-size:.9rem}.personal-point span{display:block;color:var(--muted);font-size:.78rem;margin-top:3px}
     .jortt-highlight{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;margin-top:30px;padding:24px;border-radius:22px;background:linear-gradient(135deg,var(--ice),#f1fcf8);border:1px solid rgba(70,190,232,.25);box-shadow:0 14px 38px rgba(13,27,42,.06);position:relative;overflow:hidden}
     .jortt-highlight:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--blue),var(--mint))}
     .jortt-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:800;font-size:1.15rem;box-shadow:0 10px 24px rgba(13,27,42,.16)}
@@ -178,11 +179,11 @@
     @media(max-width:640px){
       .container{width:min(calc(100% - 28px),var(--max))}.section{padding:76px 0}
       .brand-logo{width:190px;height:58px}
-      header .brand-logo{width:215px;height:64px}
+      header .brand-logo{width:240px;height:70px;margin-left:-34px}
       h1{font-size:3.25rem}.hero-actions,.hero-actions .btn{width:100%}
       .hero{padding:84px 0 92px}.hero-grid{gap:54px}.hero-copy{margin-top:30px}.benefits{margin-top:34px}.hero-actions{margin-top:38px}.hero-photo{min-height:540px;border-radius:30px}.hero-photo:before{inset:24px;border-radius:22px}
       .services,.advantages,.timeline,.articles{grid-template-columns:1fr}
-      .portrait,.trust-visual{min-height:510px;border-radius:28px}.trust-visual{padding:20px}.admin-window{padding:20px}.contact-note{margin:-6px 10px 0}.personal-tag{left:18px;right:18px;bottom:18px}.personal-points{grid-template-columns:1fr}.advantage{border-right:0;border-bottom:1px solid rgba(13,27,42,.1);padding:20px 0}.advantage:last-child{border:0}
+      .portrait,.trust-visual{min-height:510px;border-radius:28px}.trust-visual{padding:20px}.admin-window{padding:20px}.contact-note{margin:-6px 10px 0}.personal-tag{left:18px;right:18px;bottom:18px}.advantage{border-right:0;border-bottom:1px solid rgba(13,27,42,.1);padding:20px 0}.advantage:last-child{border:0}
       .cta-box{padding:38px 25px;display:block}.plant{margin:30px auto 0}
       form{grid-template-columns:1fr}label.full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-bottom{display:block}
     }
@@ -190,11 +191,11 @@
     /* Refined personal hero */
     .container{width:min(calc(100% - 72px),1440px);margin:auto}
     header{background:rgba(255,255,255,.94)}
-    .nav{height:92px}
-    .nav-links{gap:42px;font-size:.9rem}
-    .nav>.btn{background:#fff;color:var(--navy);border:1px solid var(--mint);box-shadow:none}
+    .nav{height:100px}
+    .nav-links{gap:46px;font-size:.97rem;font-weight:700;letter-spacing:-.012em;color:#13273a}
+    .nav>.btn{min-height:54px;padding:0 25px;background:#fff;color:var(--navy);border:1px solid var(--mint);box-shadow:none;font-size:.94rem}
     .nav>.btn:hover{background:#effcf8;color:var(--navy)}
-    .hero{min-height:calc(100vh - 92px);padding:112px 0 88px;background:
+    .hero{min-height:calc(100vh - 100px);padding:112px 0 88px;background:
       radial-gradient(circle at 31% 68%,rgba(70,190,232,.10),transparent 30%),
       radial-gradient(circle at 72% 88%,rgba(34,211,166,.08),transparent 31%),
       #fff}
@@ -214,10 +215,11 @@
     .hero-intro{max-width:900px}
     .hero h1{
       font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(3.35rem,4.8vw,4.6rem);
-      font-weight:700;
+      font-size:clamp(3.45rem,5vw,4.8rem);
+      font-weight:400;
       line-height:1.05;
-      letter-spacing:-.035em;
+      letter-spacing:-.015em;
+      color:#52606B;
       max-width:900px
     }
     .hero-title-line{display:block;white-space:nowrap}
@@ -411,11 +413,6 @@
             <div><b>Btw-aangifte voorbereid</b><span>Ruim voor de deadline klaar</span></div>
             <em class="admin-check">Gereed</em>
           </div>
-          <div class="admin-row">
-            <i class="admin-icon">€</i>
-            <div><b>Actueel inzicht</b><span>Je cijfers helder in beeld</span></div>
-            <em class="admin-check">Actueel</em>
-          </div>
         </div>
       </div>
       <div class="contact-note">
@@ -427,21 +424,11 @@
       <div class="eyebrow">Persoonlijk contact</div>
       <h2>Je administratie uit handen geven vraagt <span class="gradient-text">vertrouwen.</span></h2>
       <p class="trust-intro">Daarom weet je bij HelderMKB altijd wie er met jouw cijfers werkt. Je hebt rechtstreeks contact met mij, krijgt begrijpelijke uitleg en kunt erop rekenen dat ik zorgvuldig met jouw onderneming meedenk.</p>
-      <p>Boekhouden is meer dan cijfers verwerken. Het gaat ook om financiële keuzes, vragen waar je misschien niet direct mee naar iemand anders stapt en de zekerheid dat afspraken worden nagekomen. Ik vind het daarom belangrijk om jouw bedrijf echt te leren kennen en bereikbaar te zijn wanneer je mij nodig hebt.</p>
       <div class="personal-points">
         <div class="personal-point"><b>Altijd dezelfde persoon</b><span>Geen wisselend contact of anonieme helpdesk.</span></div>
         <div class="personal-point"><b>Duidelijke uitleg</b><span>Zonder onnodig ingewikkeld boekhoudjargon.</span></div>
         <div class="personal-point"><b>Oprecht betrokken</b><span>Praktische oplossingen die bij jouw bedrijf passen.</span></div>
       </div>
-      <div class="jortt-highlight" aria-label="Jortt expertise">
-        <div class="jortt-icon">J</div>
-        <div>
-          <span class="jortt-label">Ervaring met Jortt</span>
-          <h3>Jortt-specialist uit de praktijk</h3>
-          <p>Als voormalig <strong>Finance &amp; Product Specialist bij Jortt</strong> heb ik dagelijks ondernemers en accountants geholpen met boekhouding, btw-aangiften, jaarafsluitingen, automatisering en het optimaal inrichten van hun administratie. Daardoor begrijp ik niet alleen de software, maar ook de financiële processen erachter.</p>
-        </div>
-      </div>
-      <div class="values"><span class="value">✓ Betrouwbaar</span><span class="value">✓ Duidelijk</span><span class="value">✓ Oplossingsgericht</span></div>
     </div>
   </div>
 </section>
