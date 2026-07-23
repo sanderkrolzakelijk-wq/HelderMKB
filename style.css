@@ -69,6 +69,8 @@
 }
 
 .hero-copy {
+  max-width: 540px;
+  line-height: 1.78;
   margin: var(--hero-space-5) 0 var(--hero-space-4);
 }
 
@@ -76,8 +78,8 @@
   position: relative;
   width: 100%;
   max-width: 610px;
-  margin-bottom: 0;
-  padding: 26px;
+  margin-bottom: var(--hero-space-5);
+  padding: 28px;
   border: 1px solid rgba(34, 211, 166, 0.32);
   border-radius: 20px;
   background: linear-gradient(135deg, rgba(236, 250, 246, 0.92), rgba(230, 246, 251, 0.74));
@@ -149,10 +151,11 @@
 }
 
 .hero-offer__accent {
-  margin-top: 5px;
+  margin-top: 8px;
   color: var(--navy);
-  font-size: 1.12rem;
-  line-height: 1.4;
+  font-size: 1.34rem;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
 }
 
 .hero-offer__accent strong {
@@ -168,7 +171,7 @@
 
 .hero-offer__note {
   max-width: 540px;
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 0.7rem;
   line-height: 1.55;
 }
@@ -177,7 +180,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 18px;
+  margin-top: var(--hero-space-3);
 }
 
 .hero-offer__cta {
@@ -210,6 +213,11 @@
   transform: translateY(-2px);
 }
 
+.hero-visual {
+  position: relative;
+  min-width: 0;
+}
+
 .hero-photo {
   min-height: 900px;
   height: 900px;
@@ -217,12 +225,30 @@
 }
 
 .hero-photo::after {
-  display: none;
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 145%;
+  height: 92%;
+  left: 38%;
+  top: 48%;
+  display: block;
+  background: radial-gradient(
+    ellipse at 42% 52%,
+    rgba(70, 190, 232, 0.1) 0%,
+    rgba(34, 211, 166, 0.055) 31%,
+    rgba(70, 190, 232, 0.018) 55%,
+    transparent 80%
+  );
+  filter: blur(22px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .hero-photo img {
-  top: -122px;
-  width: 170%;
+  top: -146px;
+  left: 48%;
+  width: 180%;
 }
 
 /* Entrance transitions */
@@ -278,7 +304,7 @@
   min-height: 96px;
   display: flex;
   align-items: center;
-  padding: var(--hero-space-3) 0;
+  padding: 20px 0;
   border-top: 1px solid rgba(34, 211, 166, 0.15);
   border-radius: 0;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(236, 250, 246, 0.9));
@@ -295,7 +321,7 @@
 .trust-bar__items {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--hero-space-4);
+  gap: 0;
 }
 
 .trust-bar__item {
@@ -304,6 +330,13 @@
   grid-template-columns: 28px minmax(0, 1fr);
   align-items: center;
   gap: 12px;
+  padding: 4px var(--hero-space-3);
+  border-left: 1px solid rgba(13, 27, 42, 0.08);
+}
+
+.trust-bar__item:first-child {
+  padding-left: 0;
+  border-left: 0;
 }
 
 .trust-bar__icon {
@@ -324,14 +357,14 @@
 }
 
 .trust-bar__item strong {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   line-height: 1.4;
 }
 
 .trust-bar__item small {
   margin-top: 3px;
   color: var(--muted);
-  font-size: 0.64rem;
+  font-size: 0.68rem;
   line-height: 1.45;
 }
 
@@ -351,8 +384,9 @@
   }
 
   .hero-photo img {
-    top: -112px;
-    width: min(124%, 740px);
+    top: -128px;
+    left: 48%;
+    width: min(132%, 790px);
   }
 
   .trust-bar__inner {
@@ -361,7 +395,20 @@
 
   .trust-bar__items {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--hero-space-3);
+    gap: 0;
+  }
+
+  .trust-bar__item {
+    padding: var(--hero-space-2) var(--hero-space-3);
+  }
+
+  .trust-bar__item:nth-child(odd) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .trust-bar__item:nth-child(n + 3) {
+    border-top: 1px solid rgba(13, 27, 42, 0.08);
   }
 
 }
@@ -387,8 +434,9 @@
   }
 
   .hero-photo img {
-    top: -96px;
-    width: min(122%, 700px);
+    top: -112px;
+    left: 49%;
+    width: min(130%, 750px);
   }
 
   .trust-bar-section {
@@ -430,7 +478,7 @@
   }
 
   .hero-offer {
-    padding: 20px;
+    padding: 22px;
   }
 
   .hero-offer__header {
@@ -444,7 +492,7 @@
   }
 
   .hero-offer__accent {
-    font-size: 1rem;
+    font-size: 1.16rem;
   }
 
   .hero-offer__actions {
@@ -462,8 +510,9 @@
   }
 
   .hero-photo img {
-    top: -72px;
-    width: 138%;
+    top: -88px;
+    left: 50%;
+    width: 146%;
   }
 
   .trust-bar-section {
@@ -485,7 +534,17 @@
 
   .trust-bar__items {
     grid-template-columns: 1fr;
-    gap: var(--hero-space-2);
+    gap: 0;
+  }
+
+  .trust-bar__item,
+  .trust-bar__item:nth-child(odd) {
+    padding: var(--hero-space-2) 0;
+    border-left: 0;
+  }
+
+  .trust-bar__item:nth-child(n + 2) {
+    border-top: 1px solid rgba(13, 27, 42, 0.08);
   }
 
   .personal-intro {
