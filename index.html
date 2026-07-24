@@ -59,17 +59,6 @@
     .hero-photo:before{content:"";position:absolute;inset:40px;border:2px dashed rgba(13,27,42,.12);border-radius:34px}
     .hero-photo-placeholder{position:relative;z-index:1;text-align:center;color:#73808b;max-width:270px;font-size:.9rem;padding:28px}
     .hero-photo-placeholder strong{display:block;color:var(--navy);font-size:1rem;margin-bottom:7px}
-    .leaf{position:absolute;width:24px;height:12px;border-radius:100% 0 100% 0;background:var(--mint);transform:rotate(-18deg)}
-    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 12px 35px rgba(13,27,42,.05);transition:.2s ease}
-    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-    .service-icon{width:52px;height:52px;border-radius:16px;background:linear-gradient(145deg,var(--ice),#ecfbf6);display:grid;place-items:center;margin-bottom:22px;font-size:1.3rem;color:#148b79}
-    .card p{font-size:.93rem;margin-top:10px}
-    .advantage-bar{background:var(--ice);padding:36px 0}
-    .advantages{display:grid;grid-template-columns:repeat(4,1fr)}
-    .advantage{padding:4px 28px;border-right:1px solid rgba(13,27,42,.1)}
-    .advantage:last-child{border:0}
-    .advantage p{font-size:.86rem;margin-top:4px}
     .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:50px;position:relative}
     .timeline:before{content:"";position:absolute;top:25px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,var(--mint),var(--blue))}
     .step{position:relative;z-index:1}
@@ -129,24 +118,6 @@
     .jortt-highlight strong{color:var(--navy)}
     .values{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
     .value{padding:10px 14px;border-radius:99px;background:var(--ice);font-size:.82rem;font-weight:800}
-    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px;align-items:stretch}
-    .price-card{position:relative;padding:34px;display:flex;flex-direction:column}
-    .price-card.featured{border:2px solid var(--mint);transform:translateY(-9px)}
-    .badge{position:absolute;right:20px;top:18px;padding:7px 11px;border-radius:99px;background:var(--mint);font-size:.69rem;font-weight:800}
-    .price-placeholder{font-size:1.95rem;font-weight:800;margin:24px 0 8px}
-    .price-card .btn{margin-top:auto}
-    .price-card p{margin-bottom:28px}
-    .articles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:42px 0 28px}
-    .article-card{overflow:hidden;padding:0}
-    .article-image{height:150px;background:linear-gradient(135deg,var(--ice),#edfdf7);position:relative}
-    .article-image:after{content:"";position:absolute;width:90px;height:90px;border:20px solid rgba(70,190,232,.16);border-radius:50%;right:18px;top:16px}
-    .article-body{padding:25px}.article-body small{color:#118e78;font-weight:800}.article-body h3{margin:8px 0 14px}
-    .cta-section{padding:80px 0}
-    .cta-box{position:relative;overflow:hidden;border-radius:36px;padding:64px;background:linear-gradient(120deg,#e9f8fc,#edfcf7);display:flex;align-items:center;justify-content:space-between;gap:35px}
-    .cta-copy{max-width:720px}.cta-copy p{margin:15px 0 25px}
-    .plant{width:150px;height:150px;position:relative;flex:0 0 150px}
-    .stem{position:absolute;width:5px;height:110px;background:#4cac83;left:72px;bottom:4px;border-radius:9px;transform:rotate(4deg)}
-    .plant .leaf{width:58px;height:28px}.plant .l1{left:16px;top:48px;transform:rotate(20deg)}.plant .l2{right:14px;top:23px;transform:rotate(-20deg)}.plant .l3{left:23px;top:92px;transform:rotate(-10deg);background:#46bee8}
     .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;margin-top:42px}
     form{display:grid;grid-template-columns:1fr 1fr;gap:17px}
     label{display:grid;gap:7px;font-size:.84rem;font-weight:800}
@@ -167,9 +138,8 @@
       .nav-links.open{display:flex}.menu{display:grid;place-items:center}.nav .btn{display:none}
       .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:110px 0 120px;min-height:auto}.hero-grid{gap:72px}.hero-content{max-width:520px;padding:0}.hero-photo{min-height:680px}
       .about-grid{gap:45px}.portrait,.trust-visual{min-height:600px;max-width:520px;width:100%;margin:auto}
-      .services,.advantages,.timeline{grid-template-columns:repeat(2,1fr)}
-      .timeline:before{display:none}.pricing{grid-template-columns:1fr}.price-card.featured{transform:none}
-      .articles{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}
+      .timeline{grid-template-columns:repeat(2,1fr)}
+      .timeline:before{display:none}.footer-grid{grid-template-columns:1fr 1fr}
     }
     @media(max-width:640px){
       .container{width:min(calc(100% - 28px),var(--max))}.section{padding:76px 0}
@@ -177,9 +147,8 @@
       header .brand-logo{width:240px;height:70px;margin-left:-34px}
       h1{font-size:3.25rem}
       .hero{padding:84px 0 92px}.hero-grid{gap:54px}.hero-copy{margin-top:30px}.hero-photo{min-height:540px;border-radius:30px}.hero-photo:before{inset:24px;border-radius:22px}
-      .services,.advantages,.timeline,.articles{grid-template-columns:1fr}
-      .portrait,.trust-visual{min-height:510px;border-radius:28px}.trust-visual{padding:20px}.admin-window{padding:20px}.contact-note{margin:-6px 10px 0}.personal-tag{left:18px;right:18px;bottom:18px}.advantage{border-right:0;border-bottom:1px solid rgba(13,27,42,.1);padding:20px 0}.advantage:last-child{border:0}
-      .cta-box{padding:38px 25px;display:block}.plant{margin:30px auto 0}
+      .timeline{grid-template-columns:1fr}
+      .portrait,.trust-visual{min-height:510px;border-radius:28px}.trust-visual{padding:20px}.admin-window{padding:20px}.contact-note{margin:-6px 10px 0}.personal-tag{left:18px;right:18px;bottom:18px}
       form{grid-template-columns:1fr}label.full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-bottom{display:block}
     }
   
@@ -467,7 +436,7 @@
           <div class="package-card__pricing">
             <span class="package-card__badge">Blijvend €30 korting</span>
             <p class="package-card__regular"><span>Normaal</span> <s>€119 per maand</s></p>
-            <p class="package-card__founder"><span>Voor de eerste 25 klanten</span><strong>€89</strong> <small>per maand</small></p>
+            <p class="package-card__founder"><span>Voor de eerste 25 klanten:</span><strong>€89</strong> <small>per maand</small></p>
           </div>
           <p class="package-card__description">Alles wat je nodig hebt voor een administratie die klopt én overzicht geeft.</p>
         </div>
@@ -504,7 +473,7 @@
           <div class="package-card__pricing">
             <span class="package-card__badge">Blijvend €30 korting</span>
             <p class="package-card__regular"><span>Normaal</span> <s>€179 per maand</s></p>
-            <p class="package-card__founder"><span>Voor de eerste 25 klanten</span><strong>€149</strong> <small>per maand</small></p>
+            <p class="package-card__founder"><span>Voor de eerste 25 klanten:</span><strong>€149</strong> <small>per maand</small></p>
           </div>
           <p class="package-card__description">Voor vof’s die duidelijkheid willen over hun administratie, winstverdeling en belasting per vennoot.</p>
         </div>
@@ -543,7 +512,7 @@
           <div class="package-card__pricing">
             <span class="package-card__badge">Blijvend €30 korting</span>
             <p class="package-card__regular"><span>Normaal</span> <s>€249 per maand</s></p>
-            <p class="package-card__founder"><span>Voor de eerste 25 klanten</span><strong>€219</strong> <small>per maand</small></p>
+            <p class="package-card__founder"><span>Voor de eerste 25 klanten:</span><strong>€219</strong> <small>per maand</small></p>
           </div>
           <p class="package-card__description">Een compleet pakket voor één werkmaatschappij, één holding en één DGA-salaris.</p>
         </div>
@@ -581,116 +550,86 @@
   </div>
 </section>
 
-<section class="personal-intro" aria-labelledby="even-voorstellen">
+<section class="personal-intro personal-trust" id="over" aria-labelledby="persoonlijk-vertrouwen">
   <div class="container personal-intro-grid">
-    <div class="personal-intro-photo" role="img" aria-label="Plaats voor een professionele foto van Sander">
-      <div><strong>Professionele foto</strong>Plaats hier later een rustige, persoonlijke foto van Sander.</div>
+    <div class="personal-intro-photo" role="img" aria-label="Plaats voor een persoonlijk portret of een werkfoto van Sander">
+      <div><strong>Persoonlijk portret</strong>Plaats hier een rustige portret- of werkfoto van Sander.</div>
     </div>
     <div class="personal-intro-copy">
       <div class="eyebrow">Persoonlijk kennismaken</div>
-      <h2 id="even-voorstellen">Even voorstellen</h2>
+      <h2 id="persoonlijk-vertrouwen">Je administratie is bij mij geen nummer.</h2>
       <p class="hello">Hoi, ik ben Sander.</p>
-      <p>Ik heb jarenlang ondernemers geholpen met hun boekhouding en werkte als Finance &amp; Product Specialist bij Jortt. Daardoor weet ik hoeveel rust een overzichtelijke administratie en actuele cijfers kunnen geven.</p>
-      <p>Met HelderMKB help ik ondernemers op een moderne, duidelijke en persoonlijke manier.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section about-section" id="over">
-  <div class="container about-grid">
-    <div class="trust-visual" aria-label="Voorbeeld van een overzichtelijke administratie en persoonlijk contact">
-      <div class="admin-window">
-        <div class="admin-head">
-          <div><small>Goedemorgen</small><strong>Jouw administratie</strong></div>
-          <span class="status-pill">Helemaal bij</span>
-        </div>
-        <div class="admin-list">
-          <div class="admin-row">
-            <i class="admin-icon">✓</i>
-            <div><b>Boekhouding bijgewerkt</b><span>Alles verwerkt en gecontroleerd</span></div>
-            <em class="admin-check">Gereed</em>
-          </div>
-          <div class="admin-row">
-            <i class="admin-icon">↗</i>
-            <div><b>Btw-aangifte voorbereid</b><span>Ruim voor de deadline klaar</span></div>
-            <em class="admin-check">Gereed</em>
-          </div>
-        </div>
-      </div>
-      <div class="contact-note">
-        <span class="contact-avatar">SK</span>
-        <div><strong>Persoonlijk bijgepraat</strong><p>“Alles staat weer netjes klaar. Heb je een vraag? Stuur me gerust een bericht.”</p></div>
-      </div>
-    </div>
-    <div class="about-copy">
-      <div class="eyebrow">Persoonlijk contact</div>
-      <h2>Je administratie uit handen geven vraagt <span class="gradient-text">vertrouwen.</span></h2>
-      <p class="trust-intro">Daarom weet je bij HelderMKB altijd wie er met jouw cijfers werkt. Je hebt rechtstreeks contact met mij, krijgt begrijpelijke uitleg en kunt erop rekenen dat ik zorgvuldig met jouw onderneming meedenk.</p>
-      <div class="personal-points">
-        <div class="personal-point"><b>Altijd dezelfde persoon</b><span>Geen wisselend contact of anonieme helpdesk.</span></div>
-        <div class="personal-point"><b>Duidelijke uitleg</b><span>Zonder onnodig ingewikkeld boekhoudjargon.</span></div>
-        <div class="personal-point"><b>Oprecht betrokken</b><span>Praktische oplossingen die bij jouw bedrijf passen.</span></div>
+      <p>Als voormalig Finance &amp; Product Specialist bij Jortt hielp ik dagelijks ondernemers en accountants met boekhoudkundige vragen, belastingzaken en het slimmer inrichten van administraties.</p>
+      <p>Met HelderMKB combineer ik die ervaring met persoonlijk contact. Je spreekt rechtstreeks met mij en ik zorg niet alleen dat je administratie klopt, maar ook dat je begrijpt waar je financieel staat.</p>
+      <ul class="personal-trust__proof">
+        <li>Voormalig Finance &amp; Product Specialist bij Jortt</li>
+        <li>Ervaring met eenmanszaken, vof’s en bv’s</li>
+        <li>Direct contact met één vast aanspreekpunt</li>
+      </ul>
+      <div class="personal-trust__action">
+        <a class="btn btn-primary" href="#contact">Maak kennis met Sander →</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section section-soft" id="diensten">
+<section class="section process-section" id="werkwijze" aria-labelledby="werkwijze-titel">
   <div class="container">
-    <div class="eyebrow">Diensten</div><h2>Wij helpen ondernemers met</h2>
-    <div class="services">
-      <article class="card"><div class="service-icon">▤</div><h3>Administratie & boekhouding</h3><p>Altijd een up-to-date administratie en jaarstukken waar je op kunt bouwen.</p></article>
-      <article class="card"><div class="service-icon">↗</div><h3>Inzicht & rapportages</h3><p>Heldere rapportages en dashboards zodat je betere beslissingen kunt nemen.</p></article>
-      <article class="card"><div class="service-icon">◎</div><h3>Fiscaal advies</h3><p>Slim fiscaal advies dat je geld bespaart en risico’s voorkomt.</p></article>
-      <article class="card"><div class="service-icon">⚡</div><h3>Slimme automatisering</h3><p>Minder handmatig werk door slimme koppelingen en efficiënte processen.</p></article>
-    </div>
-  </div>
-</section>
-
-<div class="advantage-bar">
-  <div class="container advantages">
-    <div class="advantage"><h3>Persoonlijk & betrokken</h3><p>We kennen jou en je bedrijf.</p></div>
-    <div class="advantage"><h3>Tijdswinst</h3><p>Jij focust op ondernemen, wij regelen de rest.</p></div>
-    <div class="advantage"><h3>Veilig & betrouwbaar</h3><p>Je gegevens zijn in vertrouwde handen.</p></div>
-    <div class="advantage"><h3>Toekomstgericht</h3><p>Slimme processen die meegroeien.</p></div>
-  </div>
-</div>
-
-<section class="section" id="werkwijze">
-  <div class="container">
-    <div class="eyebrow">Zo werken we samen</div><h2>Onze werkwijze</h2><p class="lead">Eenvoudig, duidelijk en altijd met jou mee.</p>
+    <div class="eyebrow">Zo gaan we van start</div>
+    <h2 id="werkwijze-titel">Zo eenvoudig werken we samen.</h2>
+    <p class="lead">Duidelijke afspraken, een soepele overstap en vanaf het begin overzicht.</p>
     <div class="timeline">
-      <div class="step"><div class="step-number">1</div><h3>Kennismaken</h3><p>We leren jou en je bedrijf kennen en bespreken je wensen.</p></div>
-      <div class="step"><div class="step-number">2</div><h3>Inrichten</h3><p>We richten alles efficiënt in, zodat je administratie meteen klopt.</p></div>
-      <div class="step"><div class="step-number">3</div><h3>Optimaliseren</h3><p>We geven inzicht en advies om je onderneming te laten groeien.</p></div>
-      <div class="step"><div class="step-number">4</div><h3>Samen groeien</h3><p>We blijven meedenken en ondersteunen, nu en in de toekomst.</p></div>
+      <div class="step"><div class="step-number">1</div><h3>Vrijblijvend kennismaken</h3><p>We bespreken je onderneming, je huidige administratie en wat je nodig hebt.</p></div>
+      <div class="step"><div class="step-number">2</div><h3>Pakket en afspraken bepalen</h3><p>Je weet vooraf wat wij regelen, wat het kost en wat we van jou nodig hebben.</p></div>
+      <div class="step"><div class="step-number">3</div><h3>Administratie overnemen en inrichten</h3><p>Wij zorgen voor een soepele overdracht en richten alles overzichtelijk in.</p></div>
+      <div class="step"><div class="step-number">4</div><h3>Actueel inzicht en één vast aanspreekpunt</h3><p>Je administratie blijft bijgewerkt en je weet wat eraan komt.</p></div>
+    </div>
+    <div class="process-section__action">
+      <a class="btn btn-primary" href="#contact">Plan een vrijblijvende kennismaking →</a>
     </div>
   </div>
 </section>
 
-
-<section class="section section-soft" id="kennis">
+<section class="section faq-section" id="faq" aria-labelledby="faq-titel">
   <div class="container">
-    <div class="eyebrow">Kennisbank</div><h2>Heldere antwoorden voor ondernemers</h2>
-    <div class="articles">
-      <article class="card article-card"><div class="article-image"></div><div class="article-body"><small>Belastingen</small><h3>Wanneer moet je btw-aangifte doen?</h3><p>Een duidelijk overzicht van de belangrijkste momenten.</p></div></article>
-      <article class="card article-card"><div class="article-image"></div><div class="article-body"><small>Financieel inzicht</small><h3>Hoeveel geld moet je reserveren voor belasting?</h3><p>Voorkom verrassingen met een praktische aanpak.</p></div></article>
-      <article class="card article-card"><div class="article-image"></div><div class="article-body"><small>Administratie</small><h3>Welke administratie moet je bewaren?</h3><p>Wat je bewaart, hoe lang en waarom dat belangrijk is.</p></div></article>
+    <header class="faq-section__header">
+      <div class="eyebrow">Veelgestelde vragen</div>
+      <h2 id="faq-titel">Goed om vooraf te weten.</h2>
+    </header>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-1"><span>Kan ik gedurende het jaar overstappen van boekhouder?</span><span class="faq-question__icon" aria-hidden="true">+</span></button></h3>
+        <div class="faq-answer" id="faq-answer-1" hidden><p>Ja, overstappen kan meestal ook gedurende het jaar. We stemmen de overdracht zorgvuldig af en bekijken vooraf welke gegevens nodig zijn.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2"><span>Wat moet ik zelf nog aanleveren?</span><span class="faq-question__icon" aria-hidden="true">+</span></button></h3>
+        <div class="faq-answer" id="faq-answer-2" hidden><p>Je levert de benodigde verkoop- en inkoopgegevens, bankinformatie en relevante correspondentie tijdig aan. Tijdens de kennismaking spreken we af hoe dit praktisch werkt.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3"><span>Welke belastingaangiften zijn inbegrepen?</span><span class="faq-question__icon" aria-hidden="true">+</span></button></h3>
+        <div class="faq-answer" id="faq-answer-3" hidden><p>Dat verschilt per pakket. In de pakketkaarten staat precies welke btw-, inkomstenbelasting- en vennootschapsbelastingaangiften zijn inbegrepen.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4"><span>Hoe werkt de blijvende korting van €30 per maand?</span><span class="faq-question__icon" aria-hidden="true">+</span></button></h3>
+        <div class="faq-answer" id="faq-answer-4" hidden><p>De eerste 25 klanten ontvangen €30 korting per maand op het totale maandabonnement. De korting blijft gelden zolang zij zonder onderbreking klant blijven.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5"><span>Wat gebeurt er als mijn administratie meer werk blijkt te zijn?</span><span class="faq-question__icon" aria-hidden="true">+</span></button></h3>
+        <div class="faq-answer" id="faq-answer-5" hidden><p>Als de administratie afwijkt van wat vooraf is besproken, nemen we eerst contact op. Eventuele andere afspraken of kosten bespreken we voordat er iets verandert.</p></div>
+      </div>
+      <div class="faq-item">
+        <h3><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6"><span>Met welke boekhoudsoftware werken jullie?</span><span class="faq-question__icon" aria-hidden="true">+</span></button></h3>
+        <div class="faq-answer" id="faq-answer-6" hidden><p>Welke software het beste past, hangt af van je onderneming en huidige inrichting. Dat bespreken we tijdens de kennismaking, zodat vooraf duidelijk is hoe we gaan werken.</p></div>
+      </div>
     </div>
-    <a href="#" class="btn btn-secondary">Bekijk alle artikelen →</a>
-  </div>
-</section>
-
-<section class="cta-section" id="afspraak">
-  <div class="container cta-box">
-    <div class="cta-copy"><div class="eyebrow">Vrijblijvend kennismaken</div><h2>Klaar voor helder ondernemen?</h2><p>Plan een gratis kennismaking en ontdek wat HelderMKB voor jouw onderneming kan betekenen.</p><a href="#contact" class="btn btn-primary">Plan een gratis kennismaking →</a> <span class="small">Binnen 1 minuut geregeld</span></div>
-    <div class="plant" aria-hidden="true"><i class="stem"></i><i class="leaf l1"></i><i class="leaf l2"></i><i class="leaf l3"></i></div>
   </div>
 </section>
 
 <section class="section" id="contact">
   <div class="container">
-    <div class="eyebrow">Contact</div><h2>Laten we kennismaken</h2>
+    <div class="eyebrow">Contact</div>
+    <h2>Zullen we kennismaken?</h2>
+    <p class="lead">Vertel kort over je onderneming of plan direct een vrijblijvend gesprek. Dan kijken we samen welk pakket bij je past.</p>
     <div class="contact-grid">
       <form onsubmit="event.preventDefault(); alert('Bedankt! Koppel dit formulier later aan je e-maildienst.');">
         <label>Naam<input type="text" name="naam" required autocomplete="name"></label>
@@ -701,7 +640,7 @@
         <button class="btn btn-primary" type="submit">Verstuur bericht →</button>
       </form>
       <aside class="calendar">
-        <div><div class="eyebrow" style="color:#8ee8d0">Direct inplannen</div><h2 style="font-size:2.4rem">Kies een moment dat jou uitkomt.</h2><p>Hier kan later eenvoudig je Calendly-widget worden geplaatst. De link staat op één plek onderaan in de code.</p></div>
+        <div><div class="eyebrow" style="color:#8ee8d0">Direct inplannen</div><h2 style="font-size:2.4rem">Kies een moment dat jou uitkomt.</h2><p>Plan direct een vrijblijvend gesprek op een moment dat voor jou past.</p></div>
         <a class="btn" id="calendlyLink" href="https://calendly.com/" target="_blank" rel="noopener">Plan direct een afspraak →</a>
       </aside>
     </div>
@@ -716,8 +655,8 @@
         <a href="#top" class="brand" aria-label="HelderMKB home"><img class="brand-logo" src="images/logo/logo.png" alt="HelderMKB"></a>
         <p style="margin-top:16px;max-width:330px">Slimme administratie, helder financieel inzicht en praktische automatisering voor zzp’ers en kleine ondernemers.</p>
       </div>
-      <div><h3>Navigatie</h3><div class="footer-links"><a href="#diensten">Diensten</a><a href="#over">Over mij</a><a href="#werkwijze">Werkwijze</a><a href="#tarieven">Tarieven</a></div></div>
-      <div><h3>Informatie</h3><div class="footer-links"><a href="#kennis">Kennis</a><a href="#contact">Contact</a><a href="#">Privacyverklaring</a><a href="#">Algemene voorwaarden</a></div></div>
+      <div><h3>Navigatie</h3><div class="footer-links"><a href="#tarieven">Tarieven</a><a href="#over">Over mij</a><a href="#werkwijze">Werkwijze</a><a href="#faq">Veelgestelde vragen</a></div></div>
+      <div><h3>Informatie</h3><div class="footer-links"><a href="#contact">Contact</a><a href="#">Privacyverklaring</a><a href="#">Algemene voorwaarden</a></div></div>
       <div><h3>Bedrijfsgegevens</h3><div class="footer-links"><p>KvK: [placeholder]</p><p>Btw: [placeholder]</p><p>E-mail: [placeholder]</p><a href="#">LinkedIn</a></div></div>
     </div>
     <div class="footer-bottom"><p>© 2026 HelderMKB. Alle rechten voorbehouden.</p><p>Persoonlijk · Duidelijk · Efficiënt</p></div>
@@ -741,6 +680,15 @@
       const expanded=button.getAttribute('aria-expanded')==='true';
       button.setAttribute('aria-expanded',String(!expanded));
       content.hidden=expanded;
+    });
+  });
+
+  document.querySelectorAll('.faq-question').forEach(button=>{
+    button.addEventListener('click',()=>{
+      const answer=document.getElementById(button.getAttribute('aria-controls'));
+      const expanded=button.getAttribute('aria-expanded')==='true';
+      button.setAttribute('aria-expanded',String(!expanded));
+      answer.hidden=expanded;
     });
   });
 </script>
