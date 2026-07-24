@@ -17,7 +17,6 @@
       --max:1180px
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
     body{font-family:Manrope,system-ui,sans-serif;color:var(--navy);background:#fff;line-height:1.65}
     img,svg{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
@@ -41,7 +40,7 @@
     .btn-secondary{background:#fff;border-color:var(--line)}
     .btn-secondary:hover{border-color:var(--blue);background:var(--ice)}
     .btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid rgba(70,190,232,.35);outline-offset:3px}
-    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(221,232,237,.75)}
+    header{background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(221,232,237,.75)}
     .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand{display:flex;align-items:center}
     .brand-logo{width:250px;height:70px;object-fit:cover;object-position:center}
@@ -398,9 +397,9 @@
 <section class="support-section" aria-labelledby="wat-we-regelen">
   <div class="container">
     <header class="support-section__header">
-      <h2 id="wat-we-regelen">Overzicht om op te ondernemen.</h2>
-      <p class="support-section__subtitle">Niet alleen een administratie die klopt, maar duidelijkheid over waar je staat en wat er financieel mogelijk is.</p>
-      <p class="support-section__intro">Wij houden je cijfers actueel, berekenen wat je voor belasting moet reserveren en helpen je vooruitkijken. Zo weet je wat je kunt besteden, wat eraan komt en welke ruimte je hebt om te ondernemen.</p>
+      <h2 id="wat-we-regelen">Altijd weten waar je staat.</h2>
+      <p class="support-section__subtitle">Een actuele administratie is pas echt waardevol als die je overzicht geeft.</p>
+      <p class="support-section__intro">Wij houden je cijfers actueel, maken inzichtelijk hoeveel je voor belasting moet reserveren en helpen je vooruitkijken met heldere budgetten. Zo weet je wat er binnenkomt, wat eraan komt en welke financiële ruimte je hebt om te ondernemen.</p>
     </header>
 
     <div class="support-grid">
@@ -410,9 +409,12 @@
             <path d="M7 3.5h8l3 3V20.5H7zM15 3.5v3h3M10 11h5M10 15h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h3>Actueel overzicht</h3>
-        <p>Je administratie blijft bijgewerkt, zodat je altijd ziet hoe je onderneming ervoor staat.</p>
-        <p class="support-block__result">Weet wat er binnenkomt, uitgaat en overblijft.</p>
+        <span class="support-block__number" aria-hidden="true">01</span>
+        <div class="support-block__content">
+          <h3>Actueel overzicht</h3>
+          <p>Je administratie blijft bijgewerkt, zodat je altijd ziet hoe je onderneming ervoor staat.</p>
+          <p class="support-block__result">Je weet wat er binnenkomt, uitgaat en overblijft.</p>
+        </div>
       </article>
 
       <article class="support-block">
@@ -421,9 +423,12 @@
             <path d="M4 18.5V12m5 6.5V8m5 10.5V11m5 7.5V4.5M4 7.5l5-4 5 3 5-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h3>Vooruitkijken</h3>
-        <p>Met budgetten en voorlopige belastingberekeningen maken we inzichtelijk wat je kunt verwachten.</p>
-        <p class="support-block__result">Weet wat je moet reserveren en veilig kunt besteden.</p>
+        <span class="support-block__number" aria-hidden="true">02</span>
+        <div class="support-block__content">
+          <h3>Vooruitkijken</h3>
+          <p>Met budgetten en voorlopige belastingberekeningen maken we inzichtelijk wat je kunt verwachten.</p>
+          <p class="support-block__result">Je weet wat je moet reserveren en wat je veilig kunt besteden.</p>
+        </div>
       </article>
 
       <article class="support-block">
@@ -432,9 +437,12 @@
             <path d="M5 19V9.5M12 19V5m7 14v-7M3.5 19.5h17M6 5.5l4 2.5 4-4 4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        <h3>Ruimte om te ondernemen</h3>
-        <p>Je krijgt duidelijke uitleg en persoonlijk advies bij financiële keuzes.</p>
-        <p class="support-block__result">Minder onzekerheid, meer aandacht voor je onderneming.</p>
+        <span class="support-block__number" aria-hidden="true">03</span>
+        <div class="support-block__content">
+          <h3>Ruimte om te ondernemen</h3>
+          <p>Je krijgt duidelijke uitleg en persoonlijk advies bij keuzes die financiële gevolgen hebben.</p>
+          <p class="support-block__result">Minder onzekerheid en meer ruimte om met vertrouwen te ondernemen.</p>
+        </div>
       </article>
     </div>
 
