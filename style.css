@@ -392,6 +392,11 @@
   line-height: 1.06;
 }
 
+.support-section__header h2 span {
+  display: block;
+  white-space: nowrap;
+}
+
 .support-section__subtitle {
   max-width: 680px;
   margin-top: 26px;
@@ -721,7 +726,7 @@
   }
 
   .support-section__header h2 {
-    font-size: clamp(2rem, 10vw, 2.7rem);
+    font-size: clamp(1.7rem, 8.5vw, 2.7rem);
   }
 
   .support-section__subtitle {
